@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <lazy-tree></lazy-tree>
+    <isogd-documents-navigator></isogd-documents-navigator>
   </div>
 </template>
 
 <script>
-import LazyTree from './lazyTree/LazyTree.vue'
+import IsogdDocumentsNavigator from './isogdDocuments/IsogdDocumentsNavigator.vue'
 
 
 export default {
-  components: { LazyTree },
+  components: { IsogdDocumentsNavigator },
   data() {
     return {
 

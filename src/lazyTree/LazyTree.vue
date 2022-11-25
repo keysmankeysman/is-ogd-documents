@@ -217,10 +217,10 @@ export default {
 
 <style scoped>
 
-.lazy-tree >>> .tree-children {
+.lazy-tree .tree-children {
   max-width: 100%;
 }
-.lazy-tree >>> .tree-anchor {
+.lazy-tree .tree-anchor {
   max-width: 95%;
   white-space: normal;
   height: auto;
@@ -228,22 +228,22 @@ export default {
 .lazy-tree {
   width: auto;
 }
-.lazy-tree >>> .tree ul {
+.lazy-tree .tree ul {
   padding-left: 0px;
 }
-.lazy-tree >>> .tree-checkbox:after {
+.lazy-tree .tree-checkbox:after {
   left: -1px;
   position: absolute;
 }
->>> .tree-default > .tree-container-ul > .tree-node {
+.tree-default .tree-container-ul .tree-node {
   margin-left: 0;
   margin-right: 0;
 }
->>> .tree-default .tree-node {
+.tree-default .tree-node {
   margin-left: 20px;
   margin-top: 7px;
 }
-.styling-nodes >>> .tree-container-ul > .tree-node {
+.styling-nodes .tree-container-ul > .tree-node {
   margin: 5px 0;
 }
 
