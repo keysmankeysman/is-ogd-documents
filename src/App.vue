@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <lazy-tree></lazy-tree>
   </div>
 </template>
 
 <script>
+import LazyTree from './lazyTree/LazyTree.vue'
 
 
 export default {
+  components: { LazyTree },
   data() {
     return {
 
