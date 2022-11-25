@@ -98,9 +98,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
 import _sortBy from 'lodash/sortBy'
-import { TreeBuilder } from '@/components/terrZone/terrZoneHelper'
+import { TreeBuilder } from '../terrZone/terrZoneHelper.js'
+import { libraryOktmoTree } from '../data/libraryOktmoTree'
 
 export default {
   components: {
@@ -118,10 +119,14 @@ export default {
       foundItems: [],
       filter: '',
       isogdServicesFiltered: [],
-      isogdServiceId: null
+      isogdServiceId: null,
+      territoryTree: null
     }
   },
   async mounted () {
+    this.territoryTree = libraryOktmoTree
+
+
     this.documentTypes = await this.customApi.isogdDocuments.getDocumentTypes()
     const orderedDocumentTypes = _sortBy(this.documentTypes, ['gkCode', 'name'])
 
@@ -149,9 +154,9 @@ export default {
     }
   },
   computed: {
-    ...mapState({
-      territoryTree: state => state.user.libraryOktmoTree
-    }),
+    // ...mapState({
+    //   territoryTree: state => state.user.libraryOktmoTree
+    // }),
     orderedTerritoryTree () {
       return _sortBy(this.territoryTree, x => x.name)
     }
